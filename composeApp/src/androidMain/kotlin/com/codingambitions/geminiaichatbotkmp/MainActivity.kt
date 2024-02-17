@@ -1,6 +1,9 @@
 package com.codingambitions.geminiaichatbotkmp
 
 import App
+import AppContent
+import ByteArrayFactory
+import HomeViewModel
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -12,7 +15,10 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-            App()
+            AppContent(
+                viewModel = HomeViewModel(),
+                byteArrayFactory = ByteArrayFactory(baseContext)
+            )
         }
     }
 }
@@ -20,5 +26,5 @@ class MainActivity : ComponentActivity() {
 @Preview
 @Composable
 fun AppAndroidPreview() {
-    App()
+    //App()
 }

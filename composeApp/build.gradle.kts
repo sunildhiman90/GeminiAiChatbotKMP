@@ -36,10 +36,15 @@ kotlin {
         commonMain.dependencies {
             implementation(compose.runtime)
             implementation(compose.foundation)
-            implementation(compose.material)
+            implementation(compose.material3)
             implementation(compose.ui)
             @OptIn(ExperimentalComposeLibrary::class)
             implementation(compose.components.resources)
+
+            implementation("dev.shreyaspatil.generativeai:generativeai-google:0.1.2-0.0.1")
+            implementation("io.coil-kt.coil3:coil-compose:3.0.0-alpha04")
+            implementation("dev.icerock.moko:mvvm-core:0.16.1")
+            implementation("com.darkrockstudios:mpfilepicker:3.1.0")
         }
     }
 }
