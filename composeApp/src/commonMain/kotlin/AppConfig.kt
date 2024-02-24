@@ -1,3 +1,3 @@
 object AppConfig {
-    const val API_KEY = "AIzaSyBtEbUpgsbGsoPuVdddQMHJFDxRhS48xJs"
+    const val API_KEY = "put your key here"
 }
