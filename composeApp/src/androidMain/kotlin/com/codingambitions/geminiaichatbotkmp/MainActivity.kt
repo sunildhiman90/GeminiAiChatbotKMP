@@ -1,6 +1,5 @@
 package com.codingambitions.geminiaichatbotkmp
 
-import App
 import AppContent
 import ByteArrayFactory
 import HomeViewModel
