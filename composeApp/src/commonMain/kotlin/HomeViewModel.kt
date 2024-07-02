@@ -24,7 +24,7 @@ class HomeViewModel : ViewModel() {
         //high value means high creativity and less focussed
 
         generativeModel = GenerativeModel(
-            modelName = "gemini-pro-vision",
+            modelName = "gemini-1.5-flash-latest",
             apiKey = AppConfig.API_KEY,
             generationConfig = config
         )
