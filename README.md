@@ -21,7 +21,9 @@ It demonstrates the use of Generative AI SDK for Kotlin Multiplatform (Currently
 
 ## Screenshot
 
+https://github.com/sunildhiman90/GeminiAiChatbotKMP/blob/main/Screenshot_20240303_172017.png
 
+<img src="https://github.com/sunildhiman90/GeminiAiChatbotKMP/blob/main/Screenshot_20240303_172017.png" data-canonical-src="https://github.com/sunildhiman90/GeminiAiChatbotKMP/blob/main/Screenshot_20240303_172017.png" width="200" height="400" />
 
 ## Setup
 
