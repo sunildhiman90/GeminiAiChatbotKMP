@@ -1,10 +1,10 @@
 import org.jetbrains.compose.ExperimentalComposeLibrary
-import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsCompose)
+    alias(libs.plugins.compose.compiler)
 }
 
 kotlin {
@@ -30,21 +30,21 @@ kotlin {
     sourceSets {
         
         androidMain.dependencies {
-            implementation(libs.compose.ui.tooling.preview)
             implementation(libs.androidx.activity.compose)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
             implementation(compose.foundation)
             implementation(compose.material3)
+            implementation(compose.materialIconsExtended)
             implementation(compose.ui)
             @OptIn(ExperimentalComposeLibrary::class)
             implementation(compose.components.resources)
 
-            implementation("dev.shreyaspatil.generativeai:generativeai-google:0.5.0-1.0.0")
-            implementation("io.coil-kt.coil3:coil-compose:3.0.0-alpha04")
-            implementation("dev.icerock.moko:mvvm-core:0.16.1")
-            implementation("com.darkrockstudios:mpfilepicker:3.1.0")
+            implementation(libs.generativeai.google)
+            implementation(libs.coil.compose)
+            implementation(libs.mvvm.core)
+            implementation(libs.mpfilepicker)
         }
     }
 }
@@ -77,9 +77,6 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
-    }
-    dependencies {
-        debugImplementation(libs.compose.ui.tooling)
     }
 }
 
