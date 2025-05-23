@@ -11,8 +11,8 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.Send
 import androidx.compose.material.icons.filled.AddCircle
-import androidx.compose.material.icons.filled.Send
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -140,13 +140,13 @@ fun HomeScreen(
                         },
                     ) {
                         Icon(
-                            imageVector = Icons.Default.Send,
+                            imageVector = Icons.AutoMirrored.Filled.Send,
                             contentDescription = "Send"
                         )
                     }
                 }
 
-                AnimatedVisibility(visible = imagesList.size > 0) {
+                AnimatedVisibility(visible = imagesList.isNotEmpty()) {
 
                     Card(modifier = Modifier.fillMaxWidth()) {
                         LazyRow(modifier = Modifier.padding(8.dp)) {
